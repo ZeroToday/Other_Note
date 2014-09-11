@@ -1,0 +1,69 @@
+mac ssh 连接Git
+
+
+1.打开终端查看 cd ~/.ssh 查看是否存在id_rsa.pub 这个文件
+2.如果存在，先将已有的ssh备份，或者将新建的ssh生成到另外的目录下
+  如果不存在，通过默认的参数直接生成id_rsa.pub 文件
+  生成过程如下：
+  	在终端输入 ：	ssh-keygen -t rsa -C xxxxx@gmail.com（注册github时的email）
+	  	Generating public/private rsa key pair.
+		Enter file in which to save the key (/Users/sina/.ssh/id_rsa): [enter]
+		Enter passphrase (empty for no passphrase): [enter]
+		Enter same passphrase again: [enter]
+		Your identification has been saved in /Users/sina/.ssh/id_rsa.
+		Your public key has been saved in /Users/sina/.ssh/id_rsa.pub.
+		The key fingerprint is:
+		17:ff:5a:ef:48:12:d3:bb:35:e4:4d:37:48:7e:89:e5 tao6yu@gmail.com
+		The key's randomart image is:
+		+--[ RSA 2048]----+
+		|                 |
+		|                 |
+		|          .  . . |
+		|           oo.= .|
+		|        S . ++.Eo|
+		|         .   ++o+|
+		|            . =oo|
+		|             = =.|
+		|            . o.o|
+		+-----------------+
+3.配置ssh key
+ 	   登陆github，选择Account Settings-->SSH Public Keys 添加ssh
+       Title：xxxxx@gmail.com
+       Key：打开你生成的id_rsa.pub文件，将其中内容拷贝至此
+
+4.测试ssh 是否配置成功
+		  $ssh git@github.com
+		  	PTY allocation request failed on channel 0
+			Hi ZeroToday! You've successfully authenticated, but GitHub does not provide shell access.
+			Connection to github.com closed.[连接成功]
+5.设置本地git个人信息：
+	$git config --global user.name "your real name"
+    $git config --global user.email "xxxxx@gmail.com"
+
+6.创建仓库
+	a.创建远程仓库
+		https://github.com/ --> New Repository 输入Repository信息 projectName
+	b.创建本地仓库
+	   创建一个文件夹作为local repository
+       $mkdir test
+       创建一个文件
+       $cd test
+       $vi test.txt
+       将文件添加至local repository
+       $git add test.txt
+       初始化local repository
+       $git init
+       commit文件
+       $git commit -a
+       定义远程服务器别名
+       $git remote add alias git@github.com:xxxxx/projectName.git
+       将本地数据push到github上
+       $git push alias master(这样就可以将本地的代码push到github的repository中了)
+
+7.从远程仓库拉取项目
+	  在github中搜到你想要pull的代码，如https://github.com/edgecase/ruby_koans
+      选择fork，将此repository fock到你的repository下
+      在本地创建local repository并初始化
+      使用命令：
+      $git pull git@github.com:xxxxx/ruby_koans.git
+      将github上的代码pull到local repository中
