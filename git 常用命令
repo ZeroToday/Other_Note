@@ -1,0 +1,15 @@
+git 常用命令
+
+
+git init 
+
+git add .
+
+git commit -m ''
+
+git remote add origin https://github.com/ZeroToday/Other_Note.git
+
+git push -u origin master
+
+git pull
+
