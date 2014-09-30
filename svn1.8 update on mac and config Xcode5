@@ -1,0 +1,36 @@
+1.
+sudo ln -s /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain
+
+
+2.
+cd ~/Downloads/
+curl -o subversion-1.8.3.tar.gz http://archive.apache.org/dist/subversion/subversion-1.8.3.tar.gz
+tar -xvf subversion-1.8.3.tar.gz
+
+3.
+cd ~/Downloads/subversion-1.8.0
+sh get-deps.sh serf
+cd serf/
+./configure
+make
+sudo make install
+cd ..
+./configure --prefix=/usr/local --with-serf=/usr/local/serf
+make
+sudo make install
+
+4.
+To use the SVN version you just installed, you need to update your PATH.
+
+Add or edit the following line in your ~/.bash_profile:
+export PATH=/usr/local/bin:$PATH
+
+Your system should now report using SVN 1.8.0
+svn --version
+
+5.
+#以下命令可以直接复制到终端中执行
+cd /Applications/Xcode.app/Contents/Developer/usr/bin/ #进入xcode存放svn命令的子目录
+sudo mkdir svnbk #创建备份目录
+sudo mv svn* svnbk/ #把旧的svn相关文件移动到备份目录
+sudo ln -s /usr/local/bin/svn* ./ #把新的SVN文件复制到当前目录

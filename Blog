@@ -1,0 +1,38 @@
+遇到问题多动手测试
+要静心 要细心
+
+
+
+学习Objective-C 底层知识的博客
+
+http://husbandman.diandian.com
+http://blog.devtang.com/blog/2013/10/15/objective-c-object-model/
+http://blog.codingcoder.com/dig-into-objc/
+
+
+面向对象的设计经验法则
+	优先使用对象的组合而不是继承
+	针对接口编程而不是面向实现编程
+	对于程序中经常变化的部分要对其进行封装隔离
+	
+	
+2014.9.23
+发现一个NB教程
+http://www.cnblogs.com/kenshincui/p/3985090.html
+https://github.com/iosptl
+
+iOS7DayByDay
+http://www.shinobicontrols.com/blog/posts/2013/09/19/introducing-ios7-day-by-day
+https://github.com/ShinobiControls/iOS7-day-by-day
+
+iOS8DayByDay
+http://www.shinobicontrols.com/iOS8DayByDay
+https://github.com/ShinobiControls/iOS8-day-by-day
+
+
+
+2014.9.24
+
+the best place to find objective-c categories
+http://cocoacats.com/
+

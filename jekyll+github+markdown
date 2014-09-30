@@ -1,0 +1,51 @@
+jekyll+github+markdown
+
+Installation
+
+Requirements
+		Ruby
+		RubyGems
+		Linux, Unix, or Mac OS X
+		NodeJS, or another JavaScript runtime (for CoffeeScript support).
+
+
+Install with RubyGems
+
+	$ gem install jekyll
+
+		ERROR:  Could not find a valid gem 'jekyll' (>= 0), here is why:
+          Unable to download data from https://rubygems.org/ - Errno::ECONNREFUSED: Connection refused - connect(2) (https://api.rubygems.org/latest_specs.4.8.gz)
+
+    	进入rubygems官网  http://rubygems.org/pages/download
+
+    	$ gem update --system 
+
+    	-bash: $: command not found
+
+    	安装Ruby
+    		https://ruby-china.org/wiki/install_ruby_guide
+
+
+     $ gem install jekyll
+	 $ jekyll new myblog
+	 $ cd myblog
+     $ jekyll serve
+     	yutao-iMac:myblog sina$ jekyll serve
+			Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/
+			Configuration file: /Users/sina/Desktop/myblog/_config.yml
+            Source: /Users/sina/Desktop/myblog
+       		Destination: /Users/sina/Desktop/myblog/_site
+      		Generating... 
+                    done.
+			Configuration file: /Users/sina/Desktop/myblog/_config.yml
+    		Server address: http://0.0.0.0:4000/
+  			Server running... press ctrl-c to stop.
+
+
+  	新建文章
+  	rake post title="titlename"
+
+
+
+
+    	
