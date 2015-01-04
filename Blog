@@ -36,3 +36,14 @@ https://github.com/ShinobiControls/iOS8-day-by-day
 the best place to find objective-c categories
 http://cocoacats.com/
 
+
+推荐一点 ReactiveCocoa 和 MVVM 的资料，有兴趣的朋友可以看一看哈，我自己近期也会写一些相关的博文，到时候再跟大家分享下哈。
+1、官方的资料
+https://github.com/ReactiveCocoa/ReactiveCocoa
+https://github.com/ReactiveCocoa/ReactiveCocoa/blob/master/Documentation/BasicOperators.md
+2、ReactiveCocoa Tutorial – The Definitive Introduction
+http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1
+http://www.raywenderlich.com/62796/reactivecocoa-tutorial-pt2
+3、MVVM Tutorial with ReactiveCocoa（这个写得非常好，建议跟着教程从头 coding，很多精髓）
+http://www.raywenderlich.com/74106/mvvm-tutorial-with-reactivecocoa-part-1
+http://www.raywenderlich.com/74131/mvvm-tutorial-with-reactivecocoa-part-2
